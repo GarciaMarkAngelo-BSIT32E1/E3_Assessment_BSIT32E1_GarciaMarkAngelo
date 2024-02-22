@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+    h1, h2, h3 {
+      padding: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    li {
+      list-style-type: disc; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to...</h1>
+  <p>This is a paragraph...</p>
+  <img src="sharkzilla.png" alt="Image drawn by me">
+  
+  <ol>
+    <li>Duskblade of Markus</li>
+    <li>Essence Reaver</li>
+    <li>Markus' Ghostblade</li>
+  </ol>
+  <p>Visit for a<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUTbmV2ZXJnb25uYWdpdmV5b3V1cA%3D%3D">  good time :)</a></p>
+  
+  <h3 style="color: red;">Heading 3 is Red </h3>
+  <button onclick="checkNumber()">Check Number</button>
+  <p id="result"></p>
+  <script>
+    function checkNumber() {
+      var number = prompt("Enter number:");
+      
+      if (isNaN(number)) {
+        document.getElementById("result").textContent = "Invalid input. Please enter a valid number.";
+        return;
+      }
+      number = Number(number);
+      if (number % 2 === 0) {
+        document.getElementById("result").textContent = number + " is even.";
+      } else {
+        document.getElementById("result").textContent = number + " is odd.";
+      }
+    }
+  </script>
+</body>
+</html>
